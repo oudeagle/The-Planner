@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+body {}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,7 +34,31 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.task-item {
+  background-color: #4a5568;
+  /* Tailwind's gray-700 */
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.task-label {
+  display: block;
+  margin-top: 8px;
+  transition: text-decoration 0.5s;
 }
